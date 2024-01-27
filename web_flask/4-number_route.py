@@ -56,8 +56,8 @@ def is_number(n):
             return f'{n} is a number'
         else:
             raise TypeError
-        except Exception:
-            abort(404)
+    except Exception:
+        abort(404)
 
 
 if __name__ == '__main__':
