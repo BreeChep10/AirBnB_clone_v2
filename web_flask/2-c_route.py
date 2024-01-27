@@ -2,7 +2,7 @@
 
 
 """
-importing the Flask
+importing the Flask from flask
 """
 
 
