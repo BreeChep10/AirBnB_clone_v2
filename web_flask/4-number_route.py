@@ -6,7 +6,7 @@ importing Flask
 """
 
 
-from flask import Flask
+from flask import Flask, abort
 app = Flask(__name__)
 
 
@@ -51,12 +51,9 @@ def is_number(n):
     return statement
     """
     try:
-        if '.' not in n:
-            n = int(n)
-            return f'{n} is a number'
-        else:
-            raise TypeError
-    except Exception:
+        num = int(n)
+        return f"{num} is a number"
+    except ValueError:
         abort(404)
 
 
