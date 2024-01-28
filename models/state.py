@@ -33,3 +33,10 @@ class State(BaseModel, Base):
             if (elem.state_id == self.id):
                 result.append(elem)
         return (result)
+
+
+    def close(self):
+        """
+        call remove() metgod on the privat esession attribute
+        """
+        model.storage.close()
