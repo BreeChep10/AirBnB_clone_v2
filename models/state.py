@@ -34,7 +34,6 @@ class State(BaseModel, Base):
                 result.append(elem)
         return (result)
 
-
     def close(self):
         """
         call remove() metgod on the privat esession attribute
